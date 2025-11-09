@@ -1,0 +1,25 @@
+import Checkbox from "./Checkbox";
+import { categoryTitle } from "../data/category";
+
+function CategoryFilter({ selectedCategories, onChangeCategory }) {
+
+  console.log(selectedCategories);
+
+  return (
+    <div className="border border-gray-200 shadow-lg rounded-md h-48 p-5 space-y-2">
+
+      <h3 className="font-semibold text-lg">Category Filter</h3>
+      {categoryTitle.map((category, index) => (
+        <Checkbox
+          key={index}
+          text={category}
+          checked={selectedCategories.includes(category)}
+          onChange={(e) => onChangeCategory(category, e.target.checked)}
+        />
+      ))}
+
+    </div>
+  );
+}
+
+export default CategoryFilter;
