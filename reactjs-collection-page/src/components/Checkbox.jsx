@@ -1,7 +1,7 @@
 const Checkbox = ( {id , text , checked , ...props} ) => {
 
   return (
-    <div className={`relative w-full flex items-center border-b border-gray-200 pb-1.5`}>
+    <div className={`relative w-full flex items-center pb-2`}>
 
       <div className="flex items-center h-5 ">
 

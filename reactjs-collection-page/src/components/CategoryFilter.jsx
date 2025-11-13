@@ -6,9 +6,9 @@ function CategoryFilter({ selectedCategories, onChangeCategory }) {
   console.log(selectedCategories);
 
   return (
-    <div className="border border-gray-200 shadow-lg rounded-md h-48 p-5 space-y-2">
+    <div className="text-black px-4 py-3 border-b border-gray-300">
 
-      <h3 className="font-semibold text-lg">Category Filter</h3>
+      <h3 className="font-semibold text-lg py-2">Category Filter</h3>
       {categoryTitle.map((category, index) => (
         <Checkbox
           key={index}

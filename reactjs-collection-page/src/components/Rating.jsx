@@ -6,12 +6,22 @@ function Rating({ onFilter }) {
   const ratingArr = [5, 4, 3, 2, 1];
 
   const handleClick = (rat) => {
-    setSelectedRat(rat);
-    onFilter && onFilter(rat);
+
+    if (rat === selectedRat) {
+      onFilter && onFilter(null)
+      setSelectedRat(null);
+    }
+    else {
+      setSelectedRat(rat);
+      onFilter && onFilter(rat);
+    }
+    
   };
 
   return (
-    <div className="border bg-white border-gray-200 rounded-lg shadow-lg px-5 py-4">
+    <div className="border border-none px-5 py-4 ratCardsDiv">
+
+      <h3 className="text-[17px] font-semibold mb-1">Rating Filter</h3>
 
       {ratingArr.map((rat , i) => (
 

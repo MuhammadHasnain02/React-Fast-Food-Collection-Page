@@ -1,18 +1,17 @@
 function ProductCard({ product }) {
 
   return (
-    <div className={" relative max-w-sm col-span-4 border bg-white border-gray-300 rounded-2xl hover:cursor-pointer"}>
+    <div className={"relative max-w-sm col-span-4 border bg-white border-gray-300 rounded-2xl hover:cursor-pointer"}>
 
       <img src={product.image} className={"w-full h-60 object-cover"} />
 
-      <div className={"mb-26 w-full bottom-0 max-h-32 space-y-1.5 bg-[#fff] text-black px-3 py-3 rounded-b-2xl"}>
+      <div className={"mb-24 w-full bottom-0 max-h-32 space-y-1.5 bg-[#fff] text-black px-3 py-3 rounded-b-2xl"}>
         
         <div className="mt-3">
           <p className={"font-bold text-xl"}>{product.title}</p>
         </div>
 
         <div>
-
           <p className={"prodRat text-yellow-400 text-[32px] h-9 flex flex-row gap-1 items-center"}>
             {
               Array(5).fill().map((_, i) => (
@@ -23,7 +22,6 @@ function ProductCard({ product }) {
             }
             <span className="text-black text-[15px] flex items-center">({product.rating})</span>
           </p>
-          
         </div>
 
         <div>
