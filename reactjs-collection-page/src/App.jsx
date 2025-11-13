@@ -6,16 +6,20 @@ import Rating from "./components/Rating";
 import PriceRange from "./components/PriceRange";
 import { priceRange } from "./data/price-range-filter";
 import {getVisibleProducts} from "./data/product-filters";
-import FiltersTab from "./components/FiltersTab";
 import Pagination from "./components/Pagination";
 import Footer from "./components/Footer";
+import SelectSorting from "./components/SelectSorting";
+import ItemPerPage from "./components/ItemPerPage";
+import FiltersChips from "./components/FiltersChips";
 
 
 function App() {
 
-  const [selectedCateg , setSelectedCateg] = useState([])
-  const [selectedRating, setSelectedRating] = useState(null);
-  const [selectedRange, setSelectedRange] = useState({ min: 0, max: 100, isApplied: false });
+  const [ selectedCateg   , setSelectedCateg   ] = useState([])
+  const [ selectedRating  , setSelectedRating  ] = useState(null);
+  const [ selectedRange   , setSelectedRange   ] = useState({ min: priceRange.min, max: priceRange.max, isApplied: false });
+  const [ selectedSorting , setSelectedSorting ] = useState("");
+  const [ searchInp , setSearchInp ] = useState("");
 
   // Handle Category Change
   const handleCategChange = (category , isChecked) => {
@@ -41,32 +45,63 @@ function App() {
     setSelectedRange({ ...selectedRange, max: value, isApplied: true });
   }
 
-  const filteredProd = getVisibleProducts( selectedCateg , selectedRating , selectedRange )
+  // Handle Sorting Change
+  const handleSortingChange = (value) => {
+    setSelectedSorting(value);
+  };
+
+  // Handle Search Input
+  const handleSearchInp = (value) => {
+    setSearchInp(value);
+  };
+
+  const filteredProd = getVisibleProducts( selectedCateg , selectedRating , selectedRange , selectedSorting , searchInp )
 
   return (
 
-    <div>
-      <Navbar />
+    <div className="flex flex-col h-screen justify-between">
+      <Navbar onChange={handleSearchInp} />
 
-      <div className="grid grid-cols-12 my-3 mt-26">
+      {/* Main All Section Div */}
+      <div className="grid grid-cols-12 my-3 mt-28">
 
-        {/* Left Section Main Div */}
+        {/* Left Section Div */}
         <div className="sticky top-35 col-span-2 border h-130 py-1.5 rounded-xl border-gray-300 bg-white">
 
           <CategoryFilter selectedCategories={selectedCateg}
           onChangeCategory={handleCategChange}/>
 
-          <PriceRange min={priceRange.min} max={priceRange.max}
+          <PriceRange min={priceRange.min} max={priceRange.max} 
           onChange={handleRangeFilter} />
           
           <Rating onFilter={handleRatingFilter} />
 
         </div>
 
-        {/* Right Section Main Div */}
-        <div className="righSecMainDiv col-span-10 mb-2">
+        {/* Right Section Div */}
+        <div className="col-span-10 mb-2">
 
-          <FiltersTab selectdFilters={[ selectedCateg , selectedRange , selectedRating ]} />
+          {/* Top Filters Tab */}
+          <div className="grid grid-cols-12">
+
+            {/* Selected Filters Chips */}
+            <FiltersChips
+              selectedCateg={selectedCateg}
+              selectedRating={selectedRating}
+              selectedRange={selectedRange}
+              onRemoveCategory={(cat) => handleCategChange(cat, false)}
+              onRemoveRating={() => setSelectedRating(null)}
+              onRemoveRange={() => setSelectedRange({ min: priceRange.min, max: priceRange.max, isApplied: false })}
+            />
+
+            {/* Dropdowns Div */}
+            <div className="flex col-span-4 items-end">
+              <ItemPerPage />
+              <SelectSorting onChange={handleSortingChange} />
+            </div>
+              
+          </div>
+
           <hr className="mb-8" />
           <Products products={filteredProd} />
           <Pagination />

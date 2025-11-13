@@ -1,9 +1,9 @@
 function ProductCard({ product }) {
 
   return (
-    <div className={"relative max-w-sm col-span-4 border bg-white border-gray-300 rounded-2xl hover:cursor-pointer"}>
+    <div className={"relative max-w-sm col-span-4 border bg-white border-gray-300 rounded-xl hover:cursor-pointer"}>
 
-      <img src={product.image} className={"w-full h-60 object-cover"} />
+      <img src={product.image} className={"w-full h-60 object-cover rounded-t-xl"} />
 
       <div className={"mb-24 w-full bottom-0 max-h-32 space-y-1.5 bg-[#fff] text-black px-3 py-3 rounded-b-2xl"}>
         
