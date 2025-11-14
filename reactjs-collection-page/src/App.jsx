@@ -77,7 +77,7 @@ function App() {
       <div className="grid grid-cols-12 my-3 mt-28">
 
         {/* Left Section Div */}
-        <div className="sticky top-36 col-span-2 border h-130 py-0.5 rounded-lg border-gray-300 bg-white">
+        <div className="sticky top-36 col-span-2 border h-130 rounded-lg border-gray-300 bg-white">
 
           <CategoryFilter selectedCategories={selectedCateg}
           onChangeCategory={handleCategChange}/>

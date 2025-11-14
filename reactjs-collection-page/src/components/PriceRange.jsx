@@ -11,7 +11,7 @@
         };
 
         return (
-            <div className="pricRangCardsDiv text-black px-4 py-5 border-b border-gray-300">
+            <div className="pricRangCardsDiv text-black px-4 py-3.5 border-b border-gray-300">
 
                 <h3 className="font-semibold">Pricing Filter</h3>
                 <div className="pt-2 rangSlidDiv">
