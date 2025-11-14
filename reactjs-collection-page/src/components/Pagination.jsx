@@ -9,7 +9,7 @@ function  Pagination({ totalItems , itemsPerPage , currentPage , onPageChange })
 
   return (
 
-    <div className="flex justify-center items-center my-10 gap-3">
+    <div className="flex justify-center items-center mt-13 my-8 gap-3">
       
       <button onClick={ () => onPageChange(Math.max(1, currentPage - 1)) }
         className="px-4 py-2 text-sm rounded-full border border-gray-300 hover:bg-gray-100 hover:cursor-pointer transition shadow-md">

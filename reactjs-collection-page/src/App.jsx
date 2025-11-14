@@ -19,10 +19,9 @@ function App() {
   const [ selectedRating  , setSelectedRating  ] = useState(null);
   const [ selectedRange   , setSelectedRange   ] = useState({ min: priceRange.min, max: priceRange.max, isApplied: false });
   const [ selectedSorting , setSelectedSorting ] = useState("");
-  const [ searchInp , setSearchInp ]  = useState("");
-  const [ currentPage , setCurrentPage ] = useState(1);
-  const [ itemsPerPage, setItemsPerPage ] = useState(9);
-
+  const [ searchInp       , setSearchInp       ] = useState("");
+  const [ currentPage     , setCurrentPage     ] = useState(1);
+  const [ itemsPerPage    , setItemsPerPage    ] = useState(9);
 
   // Handle Category Change
   const handleCategChange = (category , isChecked) => {
@@ -78,7 +77,7 @@ function App() {
       <div className="grid grid-cols-12 my-3 mt-28">
 
         {/* Left Section Div */}
-        <div className="sticky top-35 col-span-2 border h-130 py-1.5 rounded-xl border-gray-300 bg-white">
+        <div className="sticky top-36 col-span-2 border h-130 py-0.5 rounded-lg border-gray-300 bg-white">
 
           <CategoryFilter selectedCategories={selectedCateg}
           onChangeCategory={handleCategChange}/>
@@ -91,7 +90,7 @@ function App() {
         </div>
 
         {/* Right Section Div */}
-        <div className="col-span-10 mb-2">
+        <div className="col-span-10">
 
           {/* Top Filters Tab */}
           <div className="grid grid-cols-12">
