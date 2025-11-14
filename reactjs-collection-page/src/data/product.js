@@ -1,97 +1,3 @@
-// export const products = [
-
-//   {
-//     id: 1,
-//     image: "/product-images/burger.webp",
-//     title: "Burger1",
-//     description:
-//       "Juicy grilled patty layered with melted cheese, lettuce, tomatoes, special sauce ...",
-//     price: 100,
-//     category: "Burger",
-//     rating: 5,
-//   },
-//   {
-//     id: 2,
-//     image: "/product-images/shawarma.webp",
-//     title: "Shawarma1",
-//     description:
-//       "Tender marinated chicken wrapped with sauce, crunchy veggies ,tangy flavor ...",
-//     price: 200,
-//     category: "Shawarma",
-//     rating: 4,
-//   },
-//   {
-//     id: 3,
-//     image: "/product-images/piz.webp",
-//     title: "Pizza1",
-//     description: "Crispy loaded with tomato sauce, gooey mozzarella cheese, flavorful toppings ...",
-//     price: 300,
-//     category: "Pizza",
-//     rating: 3,
-//   },
-//   {
-//     id: 4,
-//     image: "/product-images/burger.webp",
-//     title: "Burger2",
-//     description:
-//       "Juicy grilled patty layered with melted cheese, lettuce, tomatoes, special sauce ...",
-//     price: 400,
-//     category: "Burger",
-//     rating: 2,
-//   },
-//   {
-//     id: 5,
-//     image: "/product-images/shawarma.webp",
-//     title: "Shawarma2",
-//     description:
-//       "Tender marinated chicken wrapped with sauce, crunchy veggies ,tangy flavor ...",
-//     price: 500,
-//     category: "Shawarma",
-//     rating: 1,
-//   },
-//   {
-//     id: 6,
-//     image: "/product-images/piz.webp",
-//     title: "Pizza2",
-//     description: "Crispy loaded with tomato sauce, gooey mozzarella cheese, flavorful toppings ...",
-//     price: 600,
-//     category: "Pizza",
-//     rating: 5,
-//   },
-//   {
-//     id: 7,
-//     image: "/product-images/burger.webp",
-//     title: "Burger3",
-//     description:
-//       "Juicy grilled patty layered with melted cheese, lettuce, tomatoes, special sauce ...",
-//     price: 700,
-//     category: "Burger",
-//     rating: 4,
-//   },
-//   {
-//     id: 8,
-//     image: "/product-images/shawarma.webp",
-//     title: "Shawarma3",
-//     description:
-//       "Tender marinated chicken wrapped with sauce, crunchy veggies ,tangy flavor ...",
-//     price: 800,
-//     category: "Shawarma",
-//     rating: 3,
-//   },
-//   {
-//     id: 9,
-//     image: "/product-images/piz.webp",
-//     title: "Pizza3",
-//     description: "Crispy loaded with tomato sauce, gooey mozzarella cheese, flavorful toppings ...",
-//     price: 900,
-//     category: "Pizza",
-//     rating: 2,
-//   },
-
-// ];
-
-  
-
 export const products = [
 
   {
@@ -102,7 +8,7 @@ export const products = [
       "Juicy grilled patty layered with melted cheese, lettuce, tomatoes, special sauce ...",
     price: 100,
     category: "Burger",
-    rating: 5,
+    rating: 3,
   },
   {
     id: 2,
@@ -111,7 +17,7 @@ export const products = [
     description: "Crispy loaded with tomato sauce, gooey mozzarella cheese, flavorful toppings ...",
     price: 200,
     category: "Pizza",
-    rating: 3,
+    rating: 2,
   },
   {
     id: 3,
@@ -121,7 +27,7 @@ export const products = [
       "Tender marinated chicken wrapped with sauce, crunchy veggies ,tangy flavor ...",
     price: 100,
     category: "Shawarma",
-    rating: 4,
+    rating: 1,
   },
   {
     id: 4,
@@ -131,7 +37,7 @@ export const products = [
       "Assorted fast food with fries, bowl of ketchup & mayonna, bowl of hot sauce ...",
     price: 80,
     category: "Fries",
-    rating: 4,
+    rating: 2,
   },
   {
     id: 5,
@@ -141,7 +47,7 @@ export const products = [
       "Juicy grilled patty layered with melted cheese, lettuce, tomatoes, special sauce ...",
     price: 200,
     category: "Burger",
-    rating: 5,
+    rating: 2,
   },
   {
     id: 6,
@@ -160,7 +66,7 @@ export const products = [
       "Tender marinated chicken wrapped with sauce, crunchy veggies ,tangy flavor ...",
     price: 200,
     category: "Shawarma",
-    rating: 4,
+    rating: 3,
   },
   {
     id: 8,
@@ -170,7 +76,7 @@ export const products = [
       "Assorted fast food with fries, bowl of ketchup & mayonna, bowl of hot sauce ...",
     price: 150,
     category: "Fries",
-    rating: 4,
+    rating: 1,
   },
   {
     id: 9,
@@ -180,7 +86,7 @@ export const products = [
       "Juicy grilled patty layered with melted cheese, lettuce, tomatoes, special sauce ...",
     price: 300,
     category: "Burger",
-    rating: 5,
+    rating: 4,
   },
   {
     id: 10,
@@ -189,7 +95,7 @@ export const products = [
     description: "Crispy loaded with tomato sauce, gooey mozzarella cheese, flavorful toppings ...",
     price: 600,
     category: "Pizza",
-    rating: 3,
+    rating: 5,
   },
   {
     id: 11,
@@ -199,7 +105,7 @@ export const products = [
       "Tender marinated chicken wrapped with sauce, crunchy veggies ,tangy flavor ...",
     price: 300,
     category: "Shawarma",
-    rating: 4,
+    rating: 2,
   },
   {
     id: 12,
@@ -209,7 +115,7 @@ export const products = [
       "Assorted fast food with fries, bowl of ketchup & mayonna, bowl of hot sauce ...",
     price: 200,
     category: "Fries",
-    rating: 4,
+    rating: 3,
   },
   {
     id: 13,
@@ -228,7 +134,7 @@ export const products = [
     description: "Crispy loaded with tomato sauce, gooey mozzarella cheese, flavorful toppings ...",
     price: 800,
     category: "Pizza",
-    rating: 3,
+    rating: 4,
   },
   {
     id: 15,
@@ -248,7 +154,7 @@ export const products = [
       "Assorted fast food with fries, bowl of ketchup & mayonna, bowl of hot sauce ...",
     price: 250,
     category: "Fries",
-    rating: 4,
+    rating: 5,
   },
 
 ];
