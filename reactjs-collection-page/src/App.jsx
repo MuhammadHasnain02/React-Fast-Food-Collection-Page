@@ -19,7 +19,10 @@ function App() {
   const [ selectedRating  , setSelectedRating  ] = useState(null);
   const [ selectedRange   , setSelectedRange   ] = useState({ min: priceRange.min, max: priceRange.max, isApplied: false });
   const [ selectedSorting , setSelectedSorting ] = useState("");
-  const [ searchInp , setSearchInp ] = useState("");
+  const [ searchInp , setSearchInp ]  = useState("");
+  const [ currentPage , setCurrentPage ] = useState(1);
+  const [ itemsPerPage, setItemsPerPage ] = useState(9);
+
 
   // Handle Category Change
   const handleCategChange = (category , isChecked) => {
@@ -32,7 +35,8 @@ function App() {
         selectedCateg.filter((categ) => categ !== category)
       )
     }
-
+    
+    setCurrentPage(1)
   }
 
   // Handle Rating Filter
@@ -56,6 +60,14 @@ function App() {
   };
 
   const filteredProd = getVisibleProducts( selectedCateg , selectedRating , selectedRange , selectedSorting , searchInp )
+
+  // Pagination logic
+  const totalItems = filteredProd.length;
+  const indexOfLast = currentPage * itemsPerPage;
+  const indexOfFirst = indexOfLast - itemsPerPage;
+
+  const currentItems = filteredProd.slice(indexOfFirst, indexOfLast);
+
 
   return (
 
@@ -96,15 +108,20 @@ function App() {
 
             {/* Dropdowns Div */}
             <div className="flex col-span-4 items-end">
-              <ItemPerPage />
+              <ItemPerPage onChange={setItemsPerPage} />
               <SelectSorting onChange={handleSortingChange} />
             </div>
               
           </div>
 
           <hr className="mb-8" />
-          <Products products={filteredProd} />
-          <Pagination />
+          <Products products={currentItems} />
+          <Pagination
+            totalItems={totalItems}
+            itemsPerPage={itemsPerPage}
+            currentPage={currentPage}
+            onPageChange={ (pageNum) => setCurrentPage(pageNum) }
+          />
           
         </div>
         

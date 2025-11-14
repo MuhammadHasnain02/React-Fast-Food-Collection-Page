@@ -1,16 +1,13 @@
-import { useState } from "react";
 
-function ItemPerPage() {
-
-  let [selectedValue , setSelectedValue] = useState(null)
+function ItemPerPage({ onChange }) {
 
   const handleChange = (e) => {
-    
-    setSelectedValue(Number(e.target.value));
-    console.log("Items per page:", e.target.value);
+
+    const val = Number(e.target.value);
+    onChange && onChange(val)
+    console.log("Items per page:", val);
 
   };
-
 
   return (
     <div className="pgStDrpdwnDiv flex justify-center mr-2 font-[Montserrat]">

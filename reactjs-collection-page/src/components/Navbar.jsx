@@ -23,7 +23,7 @@ function Navbar({ onChange }) {
                 </div>
                 <div className="text-center navInp">
                     <input id="searchBox" type="search" onChange={handleInp} value={searchInp} placeholder="Search products..." 
-                    className="shadow-md shadow-gray-300 rounded-3xl w-[650px] p-[10px] pl-5 font-sans bg-[#e7e7e7] focus:outline-gray-400" />
+                    className="border border-gray-300 shadow-md shadow-gray-300 rounded-3xl w-[650px] p-[10px] pl-5 font-sans bg-[#e7e7e7] focus:outline-gray-400" />
                 </div>
                 <div className="flex flex-row items-center justify-end hover:cursor-pointer">
                     <i className="navCartIcon fa-solid fa-cart-shopping text-[25px] text-[#616e61]"></i>
